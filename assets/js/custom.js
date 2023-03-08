@@ -1,0 +1,76 @@
+// FOR TYPED JS SECTION
+
+document.addEventListener('DOMContentLoaded', function () {
+  Typed.new('.typed', {
+    strings: ["UI Designer.", "UI Developer.", "Web Developer.", "Shopify Developer."],
+    stringsElement: null,
+    typeSpeed: 60,
+    startDelay: 1000,
+    backSpeed: 20,
+    backDelay: 500,
+    loop: true,
+    loopCount: 5,
+    showCursor: false,
+    cursorChar: "|",
+    attr: null,
+    contentType: 'html',
+  });
+});
+
+// FOR PORTFORLIO SECTION
+
+$(function() {
+  var $grid = $('.masonry').isotope({
+      itemSelector: '.filteritem'
+  });
+  $('.filters-button-group').on('click', '.button', function() {
+      var filterValue = $(this).attr('data-filter');
+      $grid.isotope({
+          filter: filterValue
+      });
+  });
+  $('.filters-button-group').each(function(i, buttonGroup) {
+      var $buttonGroup = $(buttonGroup);
+      $buttonGroup.on('click', '.button', function() {
+          $buttonGroup.find('.is-checked').removeClass('is-checked');
+          $(this).addClass('is-checked');
+      });
+  });
+});
+
+new WOW().init();
+
+// DISABLE RIGHT CLICK SCRIPT
+
+document.addEventListener('contextmenu',(e)=>{
+    e.preventDefault();
+  }
+  );
+  document.onkeydown = function(e) {
+  if(event.keyCode == 123) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+     return false;
+  }
+  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+     return false;
+  }
+}
+
+//DISABLE CONTENT COPY PASTE SCRIPT
+
+$(document).ready(function () {
+    $('body').bind('cut copy paste', function (e) {
+        e.preventDefault();
+    });
+    $("body").on("contextmenu",function(e){
+        return false;
+    });
+});
