@@ -701,7 +701,7 @@ footer {
 }
 
 .footerdtls {
-    background: #eff2ff12;
+    background: linear-gradient(90deg, #00b4bd12, transparent);
     padding: 30px 30px 30px 98px;
     border-radius: 12px;
     position: relative;
@@ -870,7 +870,7 @@ footer ul li, footer ul li a, footer p a {
 .copyright {
     margin-top: 40px;
     padding: 20px 0;
-    background: #3a4dff05;
+    border-top: 1px dashed #00b4bd38;
 }
 
 .copyright .row {
