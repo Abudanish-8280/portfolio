@@ -275,12 +275,14 @@ header .row {
 .mainslider {
     position: relative;
 }
+
 .mainslider img {
     width: 100%;
     height: 580px;
     object-fit: cover;
     filter: brightness(.5);
 }
+
 .mainslider .carousel-caption {
     top: 50%;
     left: 0;
@@ -290,7 +292,7 @@ header .row {
     text-align: center;
 }
 
-.mainslider  h1, .mainslider p {
+.mainslider h1, .mainslider p {
     color: var(--white);
 }
 
@@ -303,6 +305,7 @@ header .row {
     animation: lts .5s ease-in-out .3s forwards;
     margin-bottom: 35px;
 }
+
 .mainslider h1 strong {
     display: block;
     font-size: 19px;
@@ -321,13 +324,16 @@ header .row {
         transform: translateX(0px);
     }
 }
+
 .mainslider .btn-primary {
     opacity: 0;
     animation: lts .5s ease-in-out 1.2s forwards;
 }
-span.typed{
+
+span.typed {
     color: var(--primary);
 }
+
 span.typed::after {
     content: "|";
     display: inline-block;
@@ -335,22 +341,25 @@ span.typed::after {
     color: var(--primary);
     transform: translateY(-3px);
 }
-  .typed-cursor {
+
+.typed-cursor {
     opacity: 0;
     display: none;
-  }
+}
 
-  @keyframes blink {
+@keyframes blink {
     0% {
-      opacity: 1;
+        opacity: 1;
     }
+
     50% {
-      opacity: 0;
+        opacity: 0;
     }
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
 
 
 
@@ -496,10 +505,10 @@ span.typed::after {
 }
 
 .services-item h3 {
-  margin: 20px 0 10px;
-  transition: .5s;
-  font-weight: 700;
-  font-size: 20px;
+    margin: 20px 0 10px;
+    transition: .5s;
+    font-weight: 700;
+    font-size: 20px;
 }
 
 .services-item p {
@@ -522,87 +531,166 @@ span.typed::after {
 /* PORTFOLIO SECTION CSS */
 
 .portfolio {
-  padding: 50px 0;
+    padding: 50px 0;
 }
+
 .portfolio .row {
     row-gap: 23px;
 }
+
 .portfolio .button {
-  display: inline-block;
-  padding: 7px 22px;
-  background: transparent;
-  font-size: 15px;
-  cursor: pointer;
-  border: 1px solid var(--primary);
-  margin: 0 4px;
-  transition: 0.3s;
-  border-radius: 2px;
+    display: inline-block;
+    padding: 7px 22px;
+    background: transparent;
+    font-size: 15px;
+    cursor: pointer;
+    border: 1px solid var(--primary);
+    margin: 0 4px;
+    transition: 0.3s;
+    border-radius: 2px;
 }
+
 .portfolio .button:hover {
-        background: linear-gradient(to right,var(--primary),var(--secondary));
-        color: var(--white);
+    background: linear-gradient(to right, var(--primary), var(--secondary));
+    color: var(--white);
     border-color: transparent;
 }
+
 .portfolio .button:active, .portfolio .button.is-checked {
-    background: linear-gradient(to right,var(--primary),var(--secondary));
+    background: linear-gradient(to right, var(--primary), var(--secondary));
     color: var(--white);
     outline: none;
     position: relative;
     border-color: transparent;
 }
+
 .portfolio .button-group {
     margin: 0 0 20px;
     text-align: center;
 }
 
 .portfolio .button-group:after {
-        content: '';
-        display: block;
-        clear: both;
-    }
-    .portfolioitem img {
-        width: 100%;
-        height: 320px;
-        object-fit: cover;
-        object-position: top;
-        border-radius: 20px;
-        transition: .5s;
-    }
+    content: '';
+    display: block;
+    clear: both;
+}
 
-    .portfolioitem {
-        padding: 3px;
-        background: #00b4bd;
-        position: relative;
-        margin: 11px 0;
-    }
+.portfolioitem img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 20px;
+    transition: .5s;
+}
 
-    .portfolioitem a.projectlink {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: var(--white);
-        height: 50px;
-        width: 50px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 16px;
-        color: var(--primary);
-        opacity: 0;
-    }
+.portfolioitem {
+    padding: 3px;
+    background: #00b4bd;
+    position: relative;
+    margin: 11px 0;
+}
 
-    .portfolioitem:hover img {
-        object-position: bottom;
-        filter: brightness(0.4);
-    }
+.portfolioitem a.projectlink {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--white);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: var(--primary);
+    opacity: 0;
+}
 
-    .portfolioitem:hover a.projectlink {
-        opacity: 1;
-    }
+.portfolioitem:hover img {
+    object-position: bottom;
+    filter: brightness(0.4);
+}
+
+.portfolioitem:hover a.projectlink {
+    opacity: 1;
+}
+
+/* HOME REVIEW SECTION CSS */
 
 
+.reviews {
+    padding: 50px 0 60px;
+    background: #fafaff;
+}
+
+.reviews .slick-track {
+    padding: 12px 0;
+}
+
+.reviewslist {
+    background: var(--white);
+    border-radius: 8px;
+    padding: 35px 30px 60px 30px;
+    position: relative;
+    box-shadow: 0 0 12px #0000001a;
+}
+
+.reviewlist-top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    column-gap: 14px
+}
+
+.reviews img {
+    height: 65px !important;
+    border-radius: 50%;
+}
+
+.reviewslist h5 {
+    margin: 0;
+    font-weight: 600
+}
+
+.reviewslist h5 span {
+    display: block;
+    font-size: 15px;
+    margin-top: 4px;
+    font-weight: 500;
+    color: var(--primary)
+}
+
+.reviewslist .rating i {
+    color: #ff8e2d;
+    font-size: 14px
+}
+
+.reviewslist p {
+    font-style: italic;
+    font-size: 18px;
+    letter-spacing: .5px;
+    line-height: 29px;
+    font-weight: 400;
+    margin: 0;
+    color: #818181;
+    text-align: justify;
+}
+
+.reviewslist i.fas.fa-quote-left {
+    position: absolute;
+    bottom: 18px;
+    right: 18px;
+    font-size: 64px;
+    color: var(--primary);
+    opacity: .1
+}
+
+.rating {
+    margin: 18px 0
+}
 
 
 /* FOOTER SECTION CSS */
@@ -618,6 +706,7 @@ footer {
     border-radius: 12px;
     position: relative;
 }
+
 .footerdtls i {
     position: absolute;
     left: 30px;
@@ -634,10 +723,12 @@ footer {
     align-items: center;
     box-shadow: 3px 3px 0 #00000012;
 }
+
 .footerdtls h4 {
     font-weight: 700;
     margin-bottom: 7px;
 }
+
 .footerdtls h4, .footerdtls a {
     color: var(--white);
 }
@@ -648,9 +739,11 @@ footer .col-sm-6 {
     border-left: 1px dashed #00b4bd38;
     padding: 10px 40px;
 }
+
 footer figure img {
     width: 330px;
 }
+
 footer .col-sm-3:nth-child(3) {
     padding-left: 55px;
 }
@@ -658,6 +751,7 @@ footer .col-sm-3:nth-child(3) {
 footer ul li.menu-item:first-child a {
     margin-top: 0;
 }
+
 footer ul li.menu-item a {
     display: inline-block;
     position: relative;
@@ -691,10 +785,11 @@ footer h3 {
     padding-bottom: 12px;
     position: relative;
     font-size: 16px;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.5px;
     line-height: 20px;
     text-transform: uppercase;
 }
+
 footer h3:after {
     position: absolute;
     content: '';
@@ -704,6 +799,7 @@ footer h3:after {
     height: 2px;
     background: var(--primary);
 }
+
 footer p {
     margin: 12px 0 15px;
     color: #e1e1e1;
@@ -794,29 +890,30 @@ footer ul li, footer ul li a, footer p a {
 
 
 #GoToTop {
-  display: none;
-  position: fixed;
-  bottom: 50px;
-  right: 25px;
-  z-index: 3;
-  padding: 0;
-  background: var(--primary);
-  width: 45px;
-  height: 45px;
-  font-size: 22px;
-  color: var(--white);
-  text-decoration: none;
-  align-items: center;
-  justify-content: center;
-  transform: rotate(45deg);
-  box-shadow: 4px 4px 0px #00000017;
-  border-radius: 0 10px;
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+    z-index: 3;
+    padding: 0;
+    background: var(--primary);
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+    color: var(--white);
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+    box-shadow: 4px 4px 0px #00000017;
+    border-radius: 0 10px;
 }
 
 #GoToTop i {
-  display: block;
-  transform: rotate(-45deg);
+    display: block;
+    transform: rotate(-45deg);
 }
+
 #whatsappbtn {
     cursor: pointer;
     position: fixed;

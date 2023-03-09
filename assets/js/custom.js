@@ -1,3 +1,4 @@
+
 // FOR TYPED JS SECTION
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -40,37 +41,64 @@ $(function() {
 
 new WOW().init();
 
-// DISABLE RIGHT CLICK SCRIPT
+// // DISABLE RIGHT CLICK SCRIPT
 
-document.addEventListener('contextmenu',(e)=>{
-    e.preventDefault();
-  }
-  );
-  document.onkeydown = function(e) {
-  if(event.keyCode == 123) {
-     return false;
-  }
-  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
-     return false;
-  }
-  if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
-     return false;
-  }
-  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
-     return false;
-  }
-  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
-     return false;
-  }
-}
+// document.addEventListener('contextmenu',(e)=>{
+//     e.preventDefault();
+//   }
+//   );
+//   document.onkeydown = function(e) {
+//   if(event.keyCode == 123) {
+//      return false;
+//   }
+//   if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+//      return false;
+//   }
+//   if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+//      return false;
+//   }
+//   if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+//      return false;
+//   }
+//   if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+//      return false;
+//   }
+// }
 
-//DISABLE CONTENT COPY PASTE SCRIPT
+// //DISABLE CONTENT COPY PASTE SCRIPT
+
+// $(document).ready(function () {
+//     $('body').bind('cut copy paste', function (e) {
+//         e.preventDefault();
+//     });
+//     $("body").on("contextmenu",function(e){
+//         return false;
+//     });
+// });
+
 
 $(document).ready(function () {
-    $('body').bind('cut copy paste', function (e) {
-        e.preventDefault();
+    $('.reviews-slider').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: false,
+      autoplaySpeed: 1500,
+      arrows: true,
+      dots: false,
+      nav: false,
+      pauseOnHover: false,
+      navText: ["<div class='nav-btn prev-slide'>swfds</div><div id='slider-num'>", "</div><div class='nav-btn next-slide'>dgfdg</div>"],
+      responsive: [{
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1
+        }
+      }, {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1
+        }
+      }]
     });
-    $("body").on("contextmenu",function(e){
-        return false;
-    });
-});
+
+  });

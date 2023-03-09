@@ -85,7 +85,6 @@ position: relative;
 .slick-slide {
 	display: none;
 	float: left;
-	height: 100%;
 	min-height: 1px;
 }
 [dir='rtl'] .slick-slide {
@@ -128,8 +127,10 @@ button.slick-next.slick-arrow {
     top: 50%;
     transform: translateY(-50%);
     border: none;
-	opacity: .3;
-	transition:.5s;
+    opacity: .3;
+    transition:.5s;
+    border-radius: 50%;
+    box-shadow: 0 3px 4px #0000001f;
 }
 button.slick-prev.slick-arrow:hover,
 button.slick-next.slick-arrow:hover{
@@ -159,9 +160,8 @@ button.slick-next.slick-arrow:after {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--dark);
+    color: var(--primary);
     background: var( --white);
-	
 }
 
 button.slick-next.slick-arrow:after {
