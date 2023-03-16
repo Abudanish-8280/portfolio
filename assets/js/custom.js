@@ -75,3 +75,30 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   });
   
+
+
+//   REVIEW SLIDER SCRIPT
+
+$(document).ready(function () {
+    $('.reviews-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 1500,
+        arrows: true,
+        dots: false,
+        nav: true,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1
+            }
+        }, {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1
+            }
+        }]
+    });
+});
