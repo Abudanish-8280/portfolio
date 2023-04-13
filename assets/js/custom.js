@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
       contentType: 'html',
     });
   });
-  
+
   // FOR PORTFORLIO SECTION
-  
+
   $(function() {
     var $grid = $('.masonry').isotope({
         itemSelector: '.filteritem'
@@ -37,11 +37,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
   });
-  
+
   new WOW().init();
-  
+
   // DISABLE RIGHT CLICK SCRIPT
-  
+
   document.addEventListener('contextmenu',(e)=>{
       e.preventDefault();
     }
@@ -63,9 +63,9 @@ document.addEventListener('DOMContentLoaded', function () {
        return false;
     }
   }
-  
+
   //DISABLE CONTENT COPY PASTE SCRIPT
-  
+
   $(document).ready(function () {
       $('body').bind('cut copy paste', function (e) {
           e.preventDefault();
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
           return false;
       });
   });
-  
+
 
 
 //   REVIEW SLIDER SCRIPT
