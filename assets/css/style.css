@@ -268,7 +268,7 @@ header .row {
 
 .mainslider img {
     width: 100%;
-    height: 580px;
+    height: auto;
     object-fit: cover;
     filter: brightness(.5)
 }
