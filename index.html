@@ -6,9 +6,9 @@
     <title>MD Abudanish Portfolio</title>
     <link rel="pingback" href="#xmlrpc.php">
     <link rel="icon" href="assets/images/favicon.jpg">
-    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
     <script type="text/javascript" src="assets/js/slick.js"></script>
     <script type="text/javascript" src='assets/js/typed.min.js'></script>
     <script type="text/javascript" src='assets/js/wow.min.js'></script>
@@ -313,6 +313,30 @@
             </div>
         </div>
     </div>
+
+
+    <script>
+        // FOR PORTFORLIO SECTION
+        $(function() {
+            var $grid = $('.masonry').isotope({
+                itemSelector: '.filteritem'
+            });
+            $('.filters-button-group').on('click', '.button', function() {
+                var filterValue = $(this).attr('data-filter');
+                $grid.isotope({
+                    filter: filterValue
+                });
+            });
+            $('.filters-button-group').each(function(i, buttonGroup) {
+                var $buttonGroup = $(buttonGroup);
+                $buttonGroup.on('click', '.button', function() {
+                    $buttonGroup.find('.is-checked').removeClass('is-checked');
+                    $(this).addClass('is-checked');
+                });
+            });
+        });
+        new WOW().init();
+    </script>
 
     <!--
     <div class="reviews" id="testimonials">

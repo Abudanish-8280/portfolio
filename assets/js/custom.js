@@ -17,28 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // FOR PORTFORLIO SECTION
-
-  $(function() {
-    var $grid = $('.masonry').isotope({
-        itemSelector: '.filteritem'
-    });
-    $('.filters-button-group').on('click', '.button', function() {
-        var filterValue = $(this).attr('data-filter');
-        $grid.isotope({
-            filter: filterValue
-        });
-    });
-    $('.filters-button-group').each(function(i, buttonGroup) {
-        var $buttonGroup = $(buttonGroup);
-        $buttonGroup.on('click', '.button', function() {
-            $buttonGroup.find('.is-checked').removeClass('is-checked');
-            $(this).addClass('is-checked');
-        });
-    });
-  });
-
-  new WOW().init();
+  
 
   // DISABLE RIGHT CLICK SCRIPT
 
