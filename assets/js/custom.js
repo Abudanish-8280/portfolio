@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function () {
     Typed.new('.typed', {
-      strings: ["UI Designer.", "UI Developer.", "Web Developer.", "Shopify Developer."],
+      strings: ["UI Designer.", "UI Developer.", "WordPress Developer.", "Shopify Developer."],
       stringsElement: null,
       typeSpeed: 60,
       startDelay: 1000,
